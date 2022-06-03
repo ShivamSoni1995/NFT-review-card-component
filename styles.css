@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root{
+    --very-dark-blue-main: hsl(217, 54%, 11%);
+--very-dark-blue-card: hsl(216, 50%, 16%);
+--very-dark-blue: hsl(215, 32%, 27%);
+--white: hsl(0, 0%, 100%);
+--soft-blue: hsl(215, 51%, 70%);
+--cyan: hsl(178, 100%, 50%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    max-width: 100%;
+} 
+
+body{ 
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    background-color: var(--very-dark-blue-main);
+    padding: 1.25rem;
+    color: hsl(0, 0%, 100%, 50%);
+}
+.container{
+    background-color: var(--very-dark-blue-card);
+    border-radius: 0.5rem;
+    padding:1.25rem; 
+    margin-bottom: 1rem;
+}
+.container .main-image{
+    position: relative;
+}
+.container .main-image div{
+    position: absolute;
+    top: 0;
+    background-color: hsl(178, 100%, 50%, 50%);
+    width: 100%;
+    height: calc(100% - 3px);
+    z-index: 1;
+    opacity: 0;
+}
+.container .main-image div:hover{
+    opacity: 1;
+    transition: ease-out 0.5s;
+}
+.container .main-image div img{
+    position: relative;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.container h2{
+    color: var(--white);
+    margin: 1rem 0.5rem 0.5rem 0;
+    font-weight: 700;
+}
+.container h2:hover{
+    color: var(--cyan);
+    cursor: pointer;
+}
+.container p{
+    margin-bottom: 0;
+}
+.container ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1.5px solid var(--white);
+}
+.container ul li{
+    display: flex;
+    align-items: center;
+}
+.container ul img{
+    margin-right: 0.5rem;
+}
+
+#one{
+    color:var(--cyan);
+}
+#two{
+    color:var(--soft-blue);
+}
+.container .avatar{
+    display: flex;
+    align-items:center;
+    justify-content: start;
+    padding-top: 0rem;
+}
+.container .avatar img{
+max-width: 100%;
+width: 5rem;
+margin-right: 1rem;
+border: 2px solid white;
+border-radius: 50%;
+}
+.container .avatar p span{
+    color:var(--white);
+    font-weight: 600;
+}
+.container .avatar p span:hover{
+    color:var(--cyan);
+    cursor: pointer;
+}
+ul{
+    list-style-type:none;
+}
+.attribution{
+    text-align: center;
+    align-items: center;
+}
+.attribution a{
+    color: hsl(228, 45%, 44%);
+}
+@media(min-width:500px){
+    .container{
+        width: 450px;
+        margin:0 auto 1rem;
+    }
+}
